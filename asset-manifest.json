@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/site_example/static/css/main.8549b4a1.chunk.css",
+    "main.js": "/site_example/static/js/main.22b230a4.chunk.js",
+    "main.js.map": "/site_example/static/js/main.22b230a4.chunk.js.map",
+    "runtime-main.js": "/site_example/static/js/runtime-main.cdde85b7.js",
+    "runtime-main.js.map": "/site_example/static/js/runtime-main.cdde85b7.js.map",
+    "static/js/2.f9a47dfe.chunk.js": "/site_example/static/js/2.f9a47dfe.chunk.js",
+    "static/js/2.f9a47dfe.chunk.js.map": "/site_example/static/js/2.f9a47dfe.chunk.js.map",
+    "index.html": "/site_example/index.html",
+    "precache-manifest.d3ed0d8e1a7df66fc65bd076d903e834.js": "/site_example/precache-manifest.d3ed0d8e1a7df66fc65bd076d903e834.js",
+    "service-worker.js": "/site_example/service-worker.js",
+    "static/css/main.8549b4a1.chunk.css.map": "/site_example/static/css/main.8549b4a1.chunk.css.map",
+    "static/media/main.scss": "/site_example/static/media/intro-background.348e7a83.png",
+    "static/media/about-history.jpg": "/site_example/static/media/about-history.e30a8000.jpg",
+    "static/media/about-philosophy.jpg": "/site_example/static/media/about-philosophy.87620fb4.jpg",
+    "static/media/about-winners.jpg": "/site_example/static/media/about-winners.fcf7411f.jpg",
+    "static/media/work-alex.jpg": "/site_example/static/media/work-alex.7cf65932.jpg",
+    "static/media/work-metiew.jpg": "/site_example/static/media/work-metiew.ee866377.jpg",
+    "static/media/work-victory.jpg": "/site_example/static/media/work-victory.6ad08a98.jpg"
+  }
+}
