@@ -1,0 +1,65 @@
+.about {
+  width: 80%;
+  height: 80vh;
+  background: url("../images/about-background.png") no-repeat right bottom;
+  @include displayColumn();
+  padding: 10vh 5vw;
+  justify-content: space-between;
+  &_list {
+    width: 80%;
+    @include displayRow();
+    justify-content: space-between;
+    &_item {
+      position: relative;
+      width: 30%;
+      height: 20vh;
+      img {
+        width: 100%;
+        height: 100%;
+        border: 15px solid blue;
+      }
+      p {
+        transition: all 0.5s ease;
+        position: absolute;
+        bottom: -3px;
+        left: 20px;
+        text-transform: uppercase;
+      }
+    }
+    &_item:hover {
+      position: relative;
+      cursor: pointer;
+      p {
+        position: absolute;
+        bottom: -18px;
+      }
+    }
+  }
+
+  h1 {
+    width: 30vw;
+    @include bigTextStyle();
+  }
+  &_career {
+    height: 30px;
+    @include displayRow();
+    align-items: center;
+    width: 20vh;
+    img {
+      transition: all 0.5s ease;
+      width: 30px;
+      margin-left: 10px;
+    }
+    p {
+      margin-left: 10px;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+  }
+  &_career:hover {
+    cursor: pointer;
+    img {
+      margin-left: 30px;
+    }
+  }
+}

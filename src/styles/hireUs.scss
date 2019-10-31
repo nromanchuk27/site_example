@@ -1,0 +1,172 @@
+.hireus {
+  width: 100%;
+  height: 90vh;
+  padding-bottom: 20vh;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 3vh;
+  }
+  .list {
+    &_first {
+      @include spaceBetween();
+      width: 100%;
+      position: relative;
+      .first {
+        width: 25%;
+        position: relative;
+        @include hireUsItem();
+        span {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+        }
+      }
+      padding: 0 10%;
+    }
+    &_second {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      .second {
+        position: relative;
+        width: 34%;
+        @include hireUsItem();
+        span {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+        }
+        .active {
+          display: block;
+        }
+        .disable {
+          display: none;
+        }
+      }
+      padding: 0 20%;
+      flex-wrap: wrap;
+    }
+    .first:hover,
+    .second:hover {
+      background-color: blue;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .form {
+    margin-bottom: 10vh;
+    @include flexCenter();
+    .error {
+      animation: shake 0.5s;
+      animation-iteration-count: infinite;
+    }
+    .authorization {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      .form {
+        width: 30%;
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+      }
+      .form input {
+        text-transform: capitalize;
+        width: 100%;
+        height: 100%;
+        color: white;
+        padding-top: 44px;
+        font-size: 26px;
+        outline: none;
+        border: none;
+        background-color: #0b0b0b;
+      }
+      .form label {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-bottom: 3px solid white;
+        pointer-events: none;
+      }
+      .form label::after {
+        content: "";
+        left: 0px;
+        bottom: -1px;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+      .content-name {
+        position: absolute;
+        font-size: 30px;
+        bottom: 20px;
+        left: 0px;
+        transition: all 0.3s ease;
+        color: white;
+      }
+      .form input:focus + .label-name .content-name,
+      .form input:valid + .label-name .content-name {
+        transform: translateY(-150%);
+        font-size: 14px;
+        color: white;
+        font-size: 20px;
+      }
+    }
+    button {
+      background-color: blue;
+      color: white;
+      border: none;
+      outline: none;
+      width: 30vw;
+      height: 5vh;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    button:hover {
+      background-color: white;
+      color: #1a67f6;
+    }
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}

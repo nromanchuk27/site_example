@@ -1,0 +1,100 @@
+.works {
+  width: 100%;
+  height: 90vh;
+  padding-bottom: 20vh;
+  h1 {
+    text-align: center;
+    text-transform: initial;
+  }
+  text-transform: uppercase;
+  &_slider {
+    height: 100%;
+    @include spaceBetween();
+    flex-direction: row;
+    align-items: center;
+    padding: 0 5%;
+    .work_selected {
+      @include flexCenter();
+      height: 100%;
+      transition: all 0.5s linear;
+      &_img {
+        border-radius: 50%;
+        width: 25rem;
+        height: 25rem;
+      }
+      &_title {
+        margin-top: $margin-top-works;
+      }
+      &_text {
+        @include workTextStyle();
+        width: 300px;
+        animation: animeSelect 1s linear;
+      }
+    }
+    .work {
+      @include flexCenter();
+      height: 100%;
+      position: relative;
+      transition: all 0.5s ease-in-out;
+      &_img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+      }
+      &_title {
+        margin-top: $margin-top-works * 2;
+      }
+      &_text {
+        @include workTextStyle();
+        font-size: 12px;
+        width: 250px;
+        transition: 1s linear;
+        animation: anime 1s linear;
+        text-transform: initial;
+      }
+    }
+    .work:hover {
+      cursor: pointer;
+    }
+    .btn_work {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #282828;
+      outline: none;
+      border: none;
+      -webkit-transition: -webkit-transform 0.5s linear;
+      img {
+        width: 50%;
+        cursor: pointer;
+        transition: transform 0.5s linear;
+        top: -50%;
+      }
+      img:hover {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+@keyframes anime {
+  0% {
+    color: white;
+  }
+  50% {
+    color: grey;
+  }
+  100% {
+    color: black;
+  }
+}
+@keyframes animeSelect {
+  0% {
+    color: black;
+  }
+  50% {
+    color: grey;
+  }
+  100% {
+    color: white;
+  }
+}

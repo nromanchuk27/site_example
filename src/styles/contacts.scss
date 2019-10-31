@@ -1,0 +1,66 @@
+.contacts {
+  width: 100%;
+  height: 96vh;
+  background: url("../images/contact-background.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  &_form {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 25%;
+    height: 50%;
+    padding: 20px 30px;
+    background: #0b0b0b;
+    box-shadow: 0 0 40px black;
+    &_contacts {
+      height: 40%;
+      @include contactFormStyle();
+      p:hover {
+        color: #1d46f5;
+        cursor: pointer;
+      }
+    }
+
+    &_btns {
+      height: 60%;
+      @include contactFormStyle();
+      button {
+        transition: all 0.3s ease;
+        width: 60%;
+        height: 20%;
+        border: none;
+        color: white;
+        outline: none;
+        cursor: pointer;
+      }
+      #a {
+        background-color: #1a67f6;
+        font-size: 1.2em;
+      }
+      #a:hover {
+        background-color: white;
+        color: #1a67f6;
+      }
+      #b {
+        background-color: #ea4c89;
+        font-size: 1.6rem;
+        font-family: "Cedarville Cursive", cursive;
+      }
+      #b:hover {
+        color: #ea4c89;
+        background-color: white;
+      }
+      #c {
+        background-color: #0f33ff;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+      #c:hover {
+        color: #0f33ff;
+        background-color: white;
+      }
+    }
+  }
+}

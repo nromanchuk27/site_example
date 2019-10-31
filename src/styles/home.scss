@@ -1,0 +1,85 @@
+.home {
+  width: 100%;
+  height: 90vh;
+  // padding-right: 15%;
+  @include displayColumn();
+  &_main {
+    height: 70%;
+    display: flex;
+    @include displayColumn();
+    justify-content: center;
+    border-bottom: 2px solid #272727;
+    background: url("../images/intro-background.png") no-repeat right bottom;
+    h1 {
+      @include bigTextStyle();
+      text-overflow: clip;
+      width: 50%;
+    }
+    .hire {
+      position: relative;
+      margin-top: 50px;
+      margin-left: 10vh;
+      border: none;
+      outline: none;
+      height: 50px;
+      width: 150px;
+      float: left;
+      background-color: #0f33ff;
+      overflow: hidden;
+      cursor: pointer;
+      .del {
+        position: absolute;
+        height: 100%;
+        width: 40px;
+        top: 0;
+        transition: all 1s ease-in-out;
+        z-index: 1;
+        background-color: #0b0b0b;
+      }
+      p {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        z-index: 4;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        color: white;
+        height: 30px;
+        width: 30px;
+      }
+    }
+    .hire:hover {
+      .del {
+        transform: translateX(-50px);
+      }
+    }
+  }
+  &_info {
+    margin-top: 20px;
+    @include displayRow();
+    justify-content: space-between;
+    color: #272727;
+    h2 {
+      text-transform: uppercase;
+    }
+    p {
+      margin-top: 20px;
+    }
+    &_text {
+      transition: all 0.3s ease;
+      width: 30%;
+    }
+    &_text:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}

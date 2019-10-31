@@ -1,0 +1,47 @@
+@mixin displayRow {
+  display: flex;
+  flex-direction: row;
+}
+@mixin displayColumn {
+  display: flex;
+  flex-direction: column;
+}
+@mixin spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin workTextStyle {
+  margin-top: $margin-top-works * 2;
+  height: 20px;
+  text-align: center;
+}
+@mixin arrowStyle {
+  width: 50%;
+  cursor: pointer;
+  transition: transform 0.5s linear;
+  top: -50%;
+}
+@mixin bigTextStyle {
+  font-family: "Bowlby One", cursive;
+  font-size: 66px;
+  line-height: 1;
+}
+@mixin contactFormStyle {
+  @include displayColumn();
+  justify-content: space-evenly;
+  align-items: center;
+}
+@mixin hireUsItem {
+  background-color: black;
+  height: 100px;
+  margin-bottom: 2vh;
+  @include flexCenter();
+  border: 3px solid white;
+  font-size: 20px;
+}
