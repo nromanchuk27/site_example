@@ -1,8 +1,7 @@
 .hireus {
   width: 100%;
-  height: 90vh;
+  height: 90%;
   padding-bottom: 20vh;
-
   h1 {
     text-align: center;
     padding-bottom: 3vh;
@@ -11,7 +10,7 @@
     &_first {
       @include spaceBetween();
       width: 100%;
-      position: relative;
+      // position: relative;
       .first {
         width: 25%;
         position: relative;
@@ -93,16 +92,7 @@
         border-bottom: 3px solid white;
         pointer-events: none;
       }
-      .form label::after {
-        content: "";
-        left: 0px;
-        bottom: -1px;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-      }
+
       .content-name {
         position: absolute;
         font-size: 30px;
@@ -168,5 +158,63 @@
   }
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@media screen and (max-width: 1400px) {
+}
+/* Portrait tablets and small desktops */
+@media screen and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+  .hireus {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15px;
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      padding: 3vh;
+    }
+    .list {
+      width: 100vw;
+      &_first,
+      &_second {
+        @include displayColumn();
+        padding: 0 10%;
+      }
+      .first,
+      .second {
+        width: 70%;
+        height: 7vh;
+      }
+    }
+    .form {
+      margin-bottom: 5vh;
+      display: flex;
+      justify-content: center;
+      .authorization {
+        display: flex;
+        flex-direction: column;
+        .form {
+          width: 90%;
+          height: 5vh;
+          input {
+            font-size: 16px;
+            padding-top: 0px;
+          }
+          .content-name {
+            bottom: 0;
+            font-size: 16px;
+          }
+        }
+      }
+      button {
+        width: 70%;
+      }
+    }
   }
 }

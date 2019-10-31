@@ -20,6 +20,7 @@
       p:hover {
         color: #1d46f5;
         cursor: pointer;
+        white-space: nowrap;
       }
     }
 
@@ -60,6 +61,35 @@
       #c:hover {
         color: #0f33ff;
         background-color: white;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .contacts {
+    &_form {
+      width: 50vw;
+      p {
+        font-size: 25px;
+      }
+    }
+  }
+}
+/* Portrait tablets and small desktops */
+@media screen and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+  .contacts {
+    &_form {
+      padding: 5px 5px;
+      width: 60vw;
+      p {
+        font-size: 12px;
+      }
+      #c {
+        font-size: 16px;
       }
     }
   }

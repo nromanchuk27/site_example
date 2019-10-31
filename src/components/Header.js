@@ -3,7 +3,6 @@ import logo from "../images/logo.png";
 
 export const Header = ({ openMenuList }) => {
   const [active, setActive] = useState(false);
-  console.log(active);
   return (
     <div className="header">
       <div

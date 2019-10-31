@@ -10,8 +10,9 @@
     @include displayRow();
     justify-content: space-between;
     &_item {
+      margin: 0 1vw;
       position: relative;
-      width: 30%;
+      width: 30vw;
       height: 20vh;
       img {
         width: 100%;
@@ -60,6 +61,85 @@
     cursor: pointer;
     img {
       margin-left: 30px;
+    }
+  }
+}
+@media screen and (max-width: 1400px) {
+  .about {
+    width: 90vw;
+    height: 100vh;
+    margin-left: 5vw;
+    background-color: red;
+    background: url("../images/about-background.png") no-repeat center;
+    .about_list {
+      display: flex;
+      align-items: flex-end;
+      height: 40vh;
+      padding-bottom: 10vh;
+      &_item {
+        width: 40%;
+        height: 40%;
+      }
+    }
+  }
+}
+/* Portrait tablets and small desktops */
+@media screen and (max-width: 991px) {
+  .about {
+    margin-left: 5vw;
+    width: 90%;
+    height: 90vh;
+    position: relative;
+    h1 {
+      font-size: 50px;
+      width: 90%;
+    }
+    .about_list {
+      // background-color: red;
+      left: 0;
+      @include displayColumn();
+      height: 40vh;
+      &_item {
+        width: 40%;
+        height: 30%;
+      }
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+  .about {
+    width: 90%;
+    height: 90vh;
+    position: relative;
+    h1 {
+      font-size: 20px;
+      width: 90%;
+      text-align: end;
+    }
+    .about_career {
+      position: absolute;
+      bottom: 30vh;
+    }
+    .about_list {
+      left: 0;
+      @include displayRow();
+      height: 40vh;
+      width: 100%;
+      align-items: flex-end;
+      &_item {
+        img {
+          border: 5px solid blue;
+        }
+        width: 40%;
+        height: 30%;
+      }
+      p {
+        font-size: 10px;
+        bottom: -3px;
+        left: 5px;
+      }
     }
   }
 }

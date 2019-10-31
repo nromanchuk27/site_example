@@ -1,6 +1,7 @@
 {
   "name": "react-hooks",
   "version": "0.1.0",
+  "homepage": "https://NRomanchuk27.github.io/site_example",
   "private": true,
   "dependencies": {
     "final-form": "^4.18.5",
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

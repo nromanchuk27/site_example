@@ -78,6 +78,7 @@ export const HireUs = () => {
           </div>
           <div className="form">
             <input
+              id="email"
               type="email"
               onChange={e => setEmail(e.target.value)}
               value={email}

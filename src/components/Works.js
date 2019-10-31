@@ -15,12 +15,7 @@ export class Works extends Component {
     };
   }
   moveSlider = direction => {
-    const {
-      currentWork,
-
-      displayRightText,
-      displayLeftText
-    } = this.state;
+    const { currentWork, displayRightText, displayLeftText } = this.state;
 
     if (direction === "right") {
       if (displayLeftText) {

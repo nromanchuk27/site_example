@@ -83,3 +83,52 @@
     }
   }
 }
+@media screen and (max-width: 1400px) {
+}
+/* Portrait tablets and small desktops */
+@media screen and (max-width: 991px) {
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+  .home {
+    margin-left: 10vw;
+    &_main {
+      h1 {
+        font-size: 20px;
+        text-align: center;
+        width: 90%;
+        color: #0f33ff;
+      }
+
+      background: url("../images/intro-background.png") 0 10px bottom;
+      background-size: cover;
+      .hire {
+        margin-top: 50%;
+        .del {
+          display: none;
+        }
+      }
+    }
+    &_info {
+      margin-top: 5px;
+      @include displayColumn();
+      width: 100%;
+      &_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2 {
+          font-size: 18px;
+          margin-top: 10px;
+        }
+        p {
+          font-size: 14px;
+          margin-top: 5px;
+          text-align: center;
+        }
+        width: 90%;
+      }
+    }
+  }
+}

@@ -20,6 +20,7 @@ body {
   color: white;
   font-family: "Montserrat", sans-serif;
   transition: all 1s ease-in-out;
+  user-select: none;
 }
 .container {
   padding: 50px 50px;
@@ -40,7 +41,6 @@ body {
   margin-top: 5%;
   display: flex;
   flex-direction: column;
-  align-content: space-around;
   align-content: space-around;
   .page_item {
     width: 100%;
@@ -115,6 +115,7 @@ body {
     width: 100%;
     cursor: pointer;
     font-weight: bold;
+    white-space: nowrap;
     position: relative;
   }
   #selected::before {
@@ -131,4 +132,50 @@ body {
   justify-content: space-evenly;
   text-align: center;
   font-size: 50px;
+}
+@media screen and (max-width: 1400px) {
+  .navigation {
+    height: 80vh;
+    z-index: 5;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media screen and (max-width: 991px) {
+  .container {
+    padding: 20px 20px;
+  }
+  .activem {
+    display: none;
+  }
+  .menu {
+    width: 100%;
+    padding: 0 15%;
+    #selected::before {
+      top: 50%;
+      // width: 20px;
+    }
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+  .navigation {
+    height: 80vh;
+    margin-left: 0;
+    .page_item {
+      .dot {
+        left: 15px;
+      }
+      span {
+        display: none;
+      }
+      p {
+        left: 25px;
+      }
+    }
+    .page_item::before {
+      left: 15px;
+    }
+  }
 }
